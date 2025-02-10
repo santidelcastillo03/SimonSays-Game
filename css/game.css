@@ -41,6 +41,11 @@ body {
   .color-btn.active {
     filter: brightness(300%);
   }
+
+  .game-container{
+    color: white;
+  }
+
   
   .controls button {
     padding: 10px 15px;
