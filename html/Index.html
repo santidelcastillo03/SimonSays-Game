@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simon Says - Menu Principal</title>
+    <link rel="stylesheet" href="menu.css" />
+  </head>
+  <body>
+    <div class="menu-container">
+      <header>
+        <h1>Simon Says</h1>
+      </header>
+      <!-- El formulario contiene el input para el nombre -->
+      <form id="start-form">
+        <input
+          type="text"
+          id="playerName"
+          placeholder="Enter your name"
+          required
+        />
+      </form>
+      <!-- El enlace actúa como botón de submit -->
+      <button onclick="location.href='game.html'">Start Game</button>
+      <button onclick="location.href='scoreboard.html'">Scoreboard</button>
+    </div>
+    <script src="menu.js"></script>
+  </body>
+</html>
