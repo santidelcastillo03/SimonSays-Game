@@ -2,7 +2,7 @@
 function cargarPuntajes(){
     let jugadores = JSON.parse(localStorage.getItem('jugadores')) || {};
     const scoreTable = document.getElementById('scoreTable');
-    scoreTable.innerHTML = ""; // Limpia la tabla
+    scoreTable.innerHTML = ""; // Limpiar la tabla
     for (const [jugador, puntaje] of Object.entries(jugadores)) {
       const row = document.createElement('tr');
       const cellName = document.createElement('td');
@@ -16,4 +16,5 @@ function cargarPuntajes(){
   }
   
   document.addEventListener('DOMContentLoaded', cargarPuntajes);
+  
   

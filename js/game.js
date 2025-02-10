@@ -14,6 +14,7 @@ const sounds = {
 };
 
 // Elementos del DOM
+
 const displayPlayerName = document.getElementById('displayPlayerName');
 const roundDisplay = document.getElementById('round');
 const scoreDisplay = document.getElementById('score');
@@ -22,7 +23,8 @@ const colorButtons = document.querySelectorAll('.color-btn');
 
 // Recuperar el nombre del jugador guardado en localStorage
 const playerName = localStorage.getItem('playerName') || 'Jugador';
-displayPlayerName.textContent = playerName;
+document.getElementById('displayPlayerName').textContent = playerName;
+
 
 // Función para iniciar el juego
 function iniciarJuego(){
@@ -111,20 +113,21 @@ function gameOver(){
   alert(`Juego Terminado, ${playerName}. Puntaje: ${score}`);
   guardarPuntaje(playerName, score);
   restartBtn.classList.remove('hidden');
-  // Se desactivan los botones para evitar más interacciones
-  colorButtons.forEach(btn => {
-    btn.disabled = true;
-  });
+  // Desactivar botones para evitar más interacciones
+  colorButtons.forEach(btn => btn.disabled = true);
 }
+
 
 // Guarda el puntaje en localStorage si es el mejor obtenido por el jugador
 function guardarPuntaje(name, puntaje){
+  if (!name) return; // No guardar si el nombre es vacío
   let jugadores = JSON.parse(localStorage.getItem('jugadores')) || {};
-  if(!jugadores[name] || puntaje > jugadores[name]){
+  if (!jugadores[name] || puntaje > jugadores[name]) {
     jugadores[name] = puntaje;
     localStorage.setItem('jugadores', JSON.stringify(jugadores));
   }
 }
+
 
 // Permite reiniciar el juego
 restartBtn.addEventListener('click', () => {
