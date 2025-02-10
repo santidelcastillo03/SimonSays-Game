@@ -7,10 +7,10 @@ let score = 0;
 const colors = ["red", "green", "blue", "yellow"];
 // Se asume que dispones de archivos de audio en una carpeta "sounds"
 const sounds = {
-  red: new Audio('sounds/red.mp3'),
-  green: new Audio('sounds/green.mp3'),
-  blue: new Audio('sounds/blue.mp3'),
-  yellow: new Audio('sounds/yellow.mp3')
+  red: new Audio('../sounds/red.mp3'),
+  green: new Audio('../sounds/green.mp3'),
+  blue: new Audio('../sounds/blue.mp3'),
+  yellow: new Audio('../sounds/yellow.mp3')
 };
 
 // Elementos del DOM

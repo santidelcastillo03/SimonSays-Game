@@ -1,31 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/scoreboard.css" />
-    <title>scoreboard</title>
-  </head>
-  <body>
-    <header>
-      <a href="index.html">Main Menu</a>
-      <h1>Scoreboard</h1>
-    </header>
-    <main>
-      <table>
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Player</th>
-            <th>Score</th>
-          </tr>
-        </thead>
-        <tbody id="scoreTable">
-          <!--Aqui js lo llena-->
-        </tbody>
-      </table>
-    </div>
-    <script src="../js/scoreboard.js"></script>
-    </main>
-  </body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simon Says - Puntajes</title>
+  <link rel="stylesheet" href="../css/scoreboard.css">
+</head>
+<body>
+  <div class="scoreboard-container">
+    <h1>Tabla de Puntajes</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Jugador</th>
+          <th>Mejor Puntaje</th>
+        </tr>
+      </thead>
+      <tbody id="scoreTable">
+        <!-- Se llenará dinámicamente mediante JavaScript -->
+      </tbody>
+    </table>
+    <a href="index.html" class="link">Volver al Menú Principal</a>
+  </div>
+  <script src="../js/scoreboard.js"></script>
+</body>
 </html>

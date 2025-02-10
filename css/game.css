@@ -39,8 +39,13 @@ body {
   #yellow { background: yellow; }
   
   .color-btn.active {
-    filter: brightness(200%);
+    filter: brightness(300%);
   }
+
+  .game-container{
+    color: white;
+  }
+
   
   .controls button {
     padding: 10px 15px;
