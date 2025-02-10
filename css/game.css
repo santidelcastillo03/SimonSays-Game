@@ -1,0 +1,60 @@
+/* game.css */
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .game-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  header {
+    margin-bottom: 20px;
+  }
+  
+  #game-board {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .color-btn {
+    width: 100%;
+    padding-bottom: 100%; /* Mantiene forma cuadrada */
+    border: none;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  #red { background: red; }
+  #green { background: green; }
+  #blue { background: blue; }
+  #yellow { background: yellow; }
+  
+  .color-btn.active {
+    filter: brightness(150%);
+  }
+  
+  .controls button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .controls a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #007BFF;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
