@@ -1,7 +1,7 @@
 /* game.css */
 body {
     font-family: Arial, sans-serif;
-    background: #f0f0f0;
+    background: rgb(40,2,40);
     margin: 0;
     padding: 20px;
     text-align: center;
@@ -39,7 +39,7 @@ body {
   #yellow { background: yellow; }
   
   .color-btn.active {
-    filter: brightness(150%);
+    filter: brightness(300%);
   }
   
   .controls button {
