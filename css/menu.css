@@ -1,0 +1,43 @@
+/* menu.css */
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .menu-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .menu-container h1 {
+    margin-bottom: 20px;
+  }
+  
+  #start-form input {
+    padding: 10px;
+    font-size: 16px;
+    width: 70%;
+    margin-bottom: 10px;
+  }
+  
+  #start-form button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .link {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #007BFF;
+  }
+  
