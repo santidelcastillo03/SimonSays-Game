@@ -11,19 +11,27 @@
       <header>
         <h1>Simon Says</h1>
       </header>
-      <!-- El formulario contiene el input para el nombre -->
-      <form id="start-form">
-        <input
-          type="text"
-          id="playerName"
-          placeholder="Enter your name"
-          required
-        />
+      
+      <!-- Input centered -->
+      <form id="start-form" onsubmit="return false;">
+        <input type="text" id="playerName" placeholder="Enter your name"  />
       </form>
-      <!-- Usar un botón con un id para capturar el evento -->
-      <button id="startGameLink">Start Game</button>
-      <button onclick="location.href='scoreboard.html'">Scoreboard</button>
+  
+      <!-- Group the buttons -->
+      <div class="button-group">
+        <button id="startGameLink">Start Game</button>
+        <button onclick="location.href='scoreboard.html'">Scoreboard</button>
+      </div>
     </div>
+  
+    <!-- Name required modal -->
+    <div id="nameModal" class="modal hidden">
+      <div class="modal-content">
+        <h2>Please enter your name</h2>
+        <button id="closeModal">Close</button>
+      </div>
+    </div>
+  
     <script src="../js/menu.js"></script>
   </body>
-</html>
+  </html>

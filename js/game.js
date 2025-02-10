@@ -35,14 +35,7 @@ function startGame() {
 }
 
 // Función para iniciar el juego
-function iniciarJuego(){
-  gameSequence = [];
-  playerSequence = [];
-  round = 0;
-  score = 0;
-  actualizarInfo();
-  siguienteRonda();
-}
+
 
 // Actualiza la información de ronda y puntaje en pantalla
 function actualizarInfo(){
@@ -117,14 +110,7 @@ function verificarSecuencia(){
 }
 
 // Cuando el jugador se equivoca, se termina el juego
-function gameOver(){
-  alert(`Juego Terminado, ${playerName}. Puntaje: ${score}`);
-  guardarPuntaje(playerName, score);
-  restartBtn.classList.remove('hidden');
-  // Desactivar botones para evitar más interacciones
-  colorButtons.forEach(btn => btn.disabled = true);
-  sounds.fail.play();
-}
+
 
 
 // Guarda el puntaje en localStorage si es el mejor obtenido por el jugador
@@ -146,6 +132,35 @@ restartBtn.addEventListener('click', () => {
   restartBtn.classList.add('hidden');
   iniciarJuego();
 });
+
+// ...existing code...
+
+function iniciarJuego(){
+  gameSequence = [];
+  playerSequence = [];
+  round = 0;
+  score = 0;
+  actualizarInfo();
+  siguienteRonda();
+}
+
+// New gameOver function
+function gameOver() {
+  sounds.fail.play();
+  const modal = document.getElementById('gameOverModal');
+  modal.classList.remove('hidden');
+}
+
+// Event listeners for modal buttons
+document.getElementById('restartButton').addEventListener('click', function() {
+  location.reload(); // Restarts the game
+});
+
+document.getElementById('mainMenuButton').addEventListener('click', function() {
+  window.location.href = 'index.html'; // Redirects to the main menu
+});
+
+// ...existing game logic code, where when the player loses, call gameOver()...
 
 // Inicia el juego al cargar la página
 document.addEventListener('DOMContentLoaded', startGame);
