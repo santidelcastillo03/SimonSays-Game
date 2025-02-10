@@ -10,7 +10,8 @@ const sounds = {
   red: new Audio('../sounds/red.mp3'),
   green: new Audio('../sounds/green.mp3'),
   blue: new Audio('../sounds/blue.mp3'),
-  yellow: new Audio('../sounds/yellow.mp3')
+  yellow: new Audio('../sounds/yellow.mp3'),
+  fail: new Audio('../sounds/fail.mp3')
 };
 
 // Elementos del DOM
@@ -110,6 +111,7 @@ function verificarSecuencia(){
 
 // Cuando el jugador se equivoca, se termina el juego
 function gameOver(){
+  sounds.fail.play();
   alert(`Juego Terminado, ${playerName}. Puntaje: ${score}`);
   guardarPuntaje(playerName, score);
   restartBtn.classList.remove('hidden');
