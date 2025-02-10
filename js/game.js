@@ -4,6 +4,7 @@ let playerSequence = [];
 let round = 0;
 let score = 0;
 const colors = ["red", "green", "blue", "yellow"];
+let allowInput = false; 
 
 const sounds = {
   red: new Audio('../sounds/red.mp3'),
@@ -13,7 +14,6 @@ const sounds = {
   fail: new Audio('../sounds/fail.mp3'),
   start: new Audio('../sounds/start.mp3')
 };
-
 
 const displayPlayerName = document.getElementById('displayPlayerName');
 const roundDisplay = document.getElementById('round');
@@ -32,15 +32,13 @@ function startGame() {
   }, 2000);
 }
 
-
-
 // Actualiza la información de ronda y puntaje en pantalla
 function actualizarInfo(){
   roundDisplay.textContent = round;
   scoreDisplay.textContent = score;
 }
 
-// Inicia la siguiente ronda: incrementa la ronda, agrega un color aleatorio y muestra la secuencia
+// Inicia la siguiente ronda, incrementa la ronda, agrega un color aleatorio y muestra la secuencia
 function siguienteRonda(){
   round++;
   score = round - 1;
@@ -53,6 +51,8 @@ function siguienteRonda(){
 
 // Muestra la secuencia al jugador con animaciones y sonidos
 function mostrarSecuencia(){
+  displayMessage('');
+  allowInput = false; 
   let i = 0;
   const intervalo = setInterval(() => {
     const color = gameSequence[i];
@@ -60,6 +60,8 @@ function mostrarSecuencia(){
     i++;
     if(i >= gameSequence.length){
       clearInterval(intervalo);
+      displayMessage("Your Turn!");
+      allowInput = true; 
     }
   }, 800);
 }
@@ -85,6 +87,7 @@ function playSound(color){
 // Maneja la interacción del jugador al hacer click en un boton
 colorButtons.forEach(btn => {
   btn.addEventListener('click', () => {
+    if(!allowInput) return; 
     if(playerSequence.length < gameSequence.length){
       const color = btn.id;
       playerSequence.push(color);
@@ -105,7 +108,6 @@ function verificarSecuencia(){
     setTimeout(siguienteRonda, 1000);
   }
 }
-
 
 
 
@@ -142,8 +144,20 @@ function iniciarJuego(){
 // New gameOver function
 function gameOver() {
   sounds.fail.play();
+  guardarPuntaje(playerName, score);
   const modal = document.getElementById('gameOverModal');
   modal.classList.remove('hidden');
+}
+
+// Muestra la secuencia al jugador con animaciones y sonidos
+
+
+// Actualiza mensaje
+function displayMessage(text){
+  const messageEl = document.getElementById('message');
+  if(messageEl){
+    messageEl.textContent = text;
+  }
 }
 
 document.getElementById('restartButton').addEventListener('click', function() {
@@ -151,7 +165,7 @@ document.getElementById('restartButton').addEventListener('click', function() {
 });
 
 document.getElementById('mainMenuButton').addEventListener('click', function() {
-  window.location.href = 'index.html'; // Redirects to the main menu
+  window.location.href = 'index.html'; 
 });
 
 
