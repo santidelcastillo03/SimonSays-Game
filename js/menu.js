@@ -9,4 +9,14 @@ document.getElementById('startGameLink').addEventListener('click', function(e) {
       alert("Please enter your name before starting the game.");
     }
   });
+
+  const sounds = {
+    pop: new Audio('../sounds/pop.mp3')
+  };
+
+  function pop(){
+    sounds.pop.play();
+  }
+
+  document.addEventListener('DOMContentLoaded', pop);
   

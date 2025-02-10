@@ -1,5 +1,10 @@
 /* scoreboard.js */
+const sounds = {
+    pop: new Audio('../sounds/pop.mp3')
+};
+
 function cargarPuntajes(){
+    sounds.pop.play();
     let jugadores = JSON.parse(localStorage.getItem('jugadores')) || {};
     const scoreTable = document.getElementById('scoreTable');
     scoreTable.innerHTML = ""; // Limpia la tabla
