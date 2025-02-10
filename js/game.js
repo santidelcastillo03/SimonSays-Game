@@ -1,11 +1,10 @@
-/* game.js */
 // Variables del juego
 let gameSequence = [];
 let playerSequence = [];
 let round = 0;
 let score = 0;
 const colors = ["red", "green", "blue", "yellow"];
-// Se asume que dispones de archivos de audio en una carpeta "sounds"
+
 const sounds = {
   red: new Audio('../sounds/red.mp3'),
   green: new Audio('../sounds/green.mp3'),
@@ -15,7 +14,6 @@ const sounds = {
   start: new Audio('../sounds/start.mp3')
 };
 
-// Elementos del DOM
 
 const displayPlayerName = document.getElementById('displayPlayerName');
 const roundDisplay = document.getElementById('round');
@@ -34,7 +32,6 @@ function startGame() {
   }, 2000);
 }
 
-// Función para iniciar el juego
 
 
 // Actualiza la información de ronda y puntaje en pantalla
@@ -67,7 +64,7 @@ function mostrarSecuencia(){
   }, 800);
 }
 
-// Activa un botón: aplica la clase de animación y reproduce el sonido
+// Activa un boton aplica la clase de animacion y reproduce el sonido
 function activarBoton(color){
   const btn = document.getElementById(color);
   btn.classList.add('active');
@@ -85,7 +82,7 @@ function playSound(color){
   }
 }
 
-// Maneja la interacción del jugador al hacer clic en un botón
+// Maneja la interacción del jugador al hacer click en un boton
 colorButtons.forEach(btn => {
   btn.addEventListener('click', () => {
     if(playerSequence.length < gameSequence.length){
@@ -109,7 +106,6 @@ function verificarSecuencia(){
   }
 }
 
-// Cuando el jugador se equivoca, se termina el juego
 
 
 
@@ -133,7 +129,6 @@ restartBtn.addEventListener('click', () => {
   iniciarJuego();
 });
 
-// ...existing code...
 
 function iniciarJuego(){
   gameSequence = [];
@@ -151,16 +146,14 @@ function gameOver() {
   modal.classList.remove('hidden');
 }
 
-// Event listeners for modal buttons
 document.getElementById('restartButton').addEventListener('click', function() {
-  location.reload(); // Restarts the game
+  location.reload(); 
 });
 
 document.getElementById('mainMenuButton').addEventListener('click', function() {
   window.location.href = 'index.html'; // Redirects to the main menu
 });
 
-// ...existing game logic code, where when the player loses, call gameOver()...
 
 // Inicia el juego al cargar la página
 document.addEventListener('DOMContentLoaded', startGame);
