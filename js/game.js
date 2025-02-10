@@ -11,7 +11,8 @@ const sounds = {
   green: new Audio('../sounds/green.mp3'),
   blue: new Audio('../sounds/blue.mp3'),
   yellow: new Audio('../sounds/yellow.mp3'),
-  fail: new Audio('../sounds/fail.mp3')
+  fail: new Audio('../sounds/fail.mp3'),
+  start: new Audio('../sounds/start.mp3')
 };
 
 // Elementos del DOM
@@ -26,6 +27,12 @@ const colorButtons = document.querySelectorAll('.color-btn');
 const playerName = localStorage.getItem('playerName') || 'Jugador';
 document.getElementById('displayPlayerName').textContent = playerName;
 
+function startGame() {
+  sounds.start.play();
+  setTimeout(function() {
+    iniciarJuego();
+  }, 2000);
+}
 
 // Función para iniciar el juego
 function iniciarJuego(){
@@ -111,12 +118,12 @@ function verificarSecuencia(){
 
 // Cuando el jugador se equivoca, se termina el juego
 function gameOver(){
-  sounds.fail.play();
   alert(`Juego Terminado, ${playerName}. Puntaje: ${score}`);
   guardarPuntaje(playerName, score);
   restartBtn.classList.remove('hidden');
   // Desactivar botones para evitar más interacciones
   colorButtons.forEach(btn => btn.disabled = true);
+  sounds.fail.play();
 }
 
 
@@ -141,4 +148,4 @@ restartBtn.addEventListener('click', () => {
 });
 
 // Inicia el juego al cargar la página
-document.addEventListener('DOMContentLoaded', iniciarJuego);
+document.addEventListener('DOMContentLoaded', startGame);
