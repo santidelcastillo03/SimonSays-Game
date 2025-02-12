@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.menu-container header h1 {
+    font-size: 48px; 
+    font-family: 'Press Start 2P', cursive;
+    margin: 0; 
+  }
+
 body {
   font-family: Arial, sans-serif;
   background: rgb(40, 2, 40);
@@ -17,7 +25,7 @@ body {
   }
 
 .menu-container {
-  background: #181529;
+  background: #ffffff;
   padding: 90px 40px;
   border-radius: 25px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -58,6 +66,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Press Start 2P', cursive;
     font-size: 16px;
     color: white;
     text-shadow: 1px 1px 2px black;
@@ -69,7 +78,7 @@ body {
     transform: scale(1.05); 
   }
   
-  /* NO SON PNG, CAMBIAR A PNG */
+
   .start-btn {
     background-image: url('../assets/bluebtn.png');
   }
@@ -91,12 +100,22 @@ body {
     transform: translateY(-5px);
   }
 
-#start-form input {
-  padding: 10px;
-  font-size: 16px;
-  width: 70%;
-  margin-bottom: 10px;
-}
+  #start-form input {
+    background: url('../assets/InputName.png') no-repeat center;
+    background-size: contain;
+    padding: 30px 20px; 
+    font-size: 16px; 
+    font-family: 'Press Start 2P', cursive;
+    width: 90%;         
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    text-align: center; 
+  }
+  
+  #start-form input:focus {
+    background-color: transparent; 
+  }
 
 #start-form button {
   padding: 10px 15px;
@@ -104,32 +123,75 @@ body {
   cursor: pointer;
 }
 
-.link {
-  display: inline-block;
-  margin-top: 15px;
-  text-decoration: none;
-  color: #007BFF;
-}
+/*Popup window*/
+  .modal {
+    display: none;
+  }
+  
+  .modal.active {
+    display: flex;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .modal-content button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
 
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: url('../assets/rectangle.png') no-repeat center;
+    background-size: 100% 100%;
+    padding: 40px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    gap: 20px;             
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+  }
 
-.modal-content {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-}
+    .modal-content button {
+        background: url('../assets/greenbtn.png') no-repeat center;
+        background-size: 100% 100%;
+        width: 260px;      
+        height: 80px;     
+        border: none;
+        cursor: pointer;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 20px;
+        color: white;
+        text-shadow: 1px 1px 2px black;
+        justify-content: center;
+        align-items: center;
+    }
 
 .hidden {
   display: none;

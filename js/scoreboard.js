@@ -1,4 +1,4 @@
-/* scoreboard.js */
+
 const sounds = {
     pop: new Audio('../sounds/pop.mp3')
 };
@@ -9,7 +9,7 @@ function cargarPuntajes(){
     const scoreTable = document.getElementById('scoreTable');
     scoreTable.innerHTML = ""; // Limpia la tabla
     
-    // Get entries and sort them descending by score
+    
     const sortedEntries = Object.entries(jugadores).sort((a, b) => b[1] - a[1]);
     
     sortedEntries.forEach(([jugador, puntaje]) => {

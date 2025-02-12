@@ -26,6 +26,7 @@ const playerName = localStorage.getItem('playerName') || 'Jugador';
 document.getElementById('displayPlayerName').textContent = playerName;
 
 function startGame() {
+  //localStorage.clear(); //CUIDADO, SOLO USAR PARA BORRAR LOS DATOS 
   sounds.start.play();
   setTimeout(function() {
     iniciarJuego();
@@ -60,7 +61,9 @@ function mostrarSecuencia(){
     i++;
     if(i >= gameSequence.length){
       clearInterval(intervalo);
-      displayMessage("Your Turn!");
+      setTimeout(function() {
+        displayMessage('Your turn!');
+      }, 1000);
       allowInput = true; 
     }
   }, 800);

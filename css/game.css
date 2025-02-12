@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     background: rgb(40,2,40);
@@ -42,7 +44,7 @@ body {
   
   #red { background: red; }
   #green { background: green; }
-  #blue { background: rgb(3, 3, 169); }
+  #blue { background: blue; }
   #yellow { background: yellow; }
   
   .color-btn.active {
@@ -56,16 +58,87 @@ body {
   }
 
   
+  .score-info {
+    display: flex;
+    gap: 20px;         
+    justify-content: center;  
+    align-items: center;      
+    margin: 10px 0;    
+  }
+  
+  .score-info p {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;   
+    color: white;
+  }
+  
   .controls button {
     padding: 10px 15px;
     font-size: 16px;
     cursor: pointer;
   }
+
+  .game-container header p {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px; 
+    color: white;
+  }
   
-  .controls a {
-    margin-left: 20px;
+  .message {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px; 
+    color: white;
+  }
+  
+  .info-box {
+    background: url('../assets/rectangle.png') no-repeat center;
+    background-size: 100% 100%;
+    width: 500px;   
+    height: 150px;  
+    margin: 0 auto 20px auto;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .info-box p {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    color: white;
+    margin: 5px 0;
+  }
+  
+  .score-info {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-menu-link {
+    display: inline-flex; 
+    background: url('../assets/greybtn.png') no-repeat center;
+    background-size: 100% 100%;
+    width: 300px;  
+    height: 100px; 
+    justify-content: center; 
+    align-items: center;     
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
     text-decoration: none;
-    color: #007BFF;
+    transition: transform 0.2s ease;
+  }
+
+  .main-menu-link span {
+    display: inline-block;
+    transform: translateY(-10px); 
+  }
+  
+  .main-menu-link:hover {
+    transform: scale(1.05);
   }
   
   .hidden {
@@ -78,7 +151,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,13 +159,101 @@ body {
   }
   
   .modal-content {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
+    background: url('../assets/rectangle.png') no-repeat center;
+    background-size: 100% 100%;
+    padding: 40px;
+    border-radius: 25px;
     text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
   }
   
   .hidden {
     display: none;
   }
   
+  #restartButton {
+    display: inline-flex;
+    background: url('../assets/yllwbtn.png') no-repeat center;
+    background-size: 100% 100%;
+    width: 260px;      
+    height: 80px;     
+    border: none;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #mainMenuButton {
+    display: inline-flex;
+    background: url('../assets/bluebtn.png') no-repeat center;
+    background-size: 100% 100%;
+    width: 260px;      
+    height: 80px;     
+    border: none;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #restartButton span,
+  #mainMenuButton span {
+  display: inline-block;
+  transform: translateY(-8px); 
+}
+
+#restartButton:hover,
+#mainMenuButton:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+/*@media (max-width: 480px) {
+  .game-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  header {
+    margin-bottom: 10px;
+  }
+
+  #game-board {
+    gap: 5px;
+  }
+
+  .color-btn {
+    border-radius: 5px; 
+  }
+
+  .score-info p,
+  .game-container header p,
+  .message,
+  .info-box p,
+  .main-menu-link,
+  #restartButton,
+  #mainMenuButton {
+    font-size: 16px;
+  }
+
+  .main-menu-link {
+    width: 240px;
+    height: 80px;
+  }
+
+  #restartButton,
+  #mainMenuButton {
+    width: 240px;
+    height: 70px;
+  }
+} PROBAR RESPONSIVENESS*/
