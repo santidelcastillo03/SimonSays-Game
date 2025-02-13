@@ -8,7 +8,7 @@ document.getElementById('startGameLink').addEventListener('click', function(e) {
       document.getElementById('nameModal').classList.remove('hidden');
     } else {
       localStorage.setItem('playerName', playerName);
-      window.location.href = 'game.html';
+      window.location.href = 'html/game.html';
     }
   });
   

@@ -168,7 +168,7 @@ document.getElementById('restartButton').addEventListener('click', function() {
 });
 
 document.getElementById('mainMenuButton').addEventListener('click', function() {
-  window.location.href = 'index.html'; 
+  window.location.href = '../index.html'; 
 });
 
 
