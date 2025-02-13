@@ -7,10 +7,10 @@ const colors = ["red", "green", "blue", "yellow"];
 let allowInput = false; 
 
 const sounds = {
-  red: new Audio('../sounds/red.mp3'),
-  green: new Audio('../sounds/green.mp3'),
-  blue: new Audio('../sounds/blue.mp3'),
-  yellow: new Audio('../sounds/yellow.mp3'),
+  red: new Audio('../sounds/red.wav'),
+  green: new Audio('../sounds/green.wav'),
+  blue: new Audio('../sounds/blue.wav'),
+  yellow: new Audio('../sounds/yellow.wav'),
   fail: new Audio('../sounds/fail.mp3'),
   start: new Audio('../sounds/start.mp3')
 };

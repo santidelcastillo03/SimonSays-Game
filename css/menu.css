@@ -28,7 +28,7 @@ body {
   background: #ffffff;
   padding: 90px 40px;
   border-radius: 25px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 90%;
   max-width: 750px;
   margin: 20px auto;
@@ -39,8 +39,9 @@ body {
   text-align: center;
 }
 
-.menu-container header {
-  flex-shrink: 0;
+.menu-container header h1 {
+  font-family: 'Press Start 2P', cursive;
+  margin: 0; 
 }
 
 #start-form {
@@ -50,33 +51,70 @@ body {
   margin: 20px 0;
 }
 
-
-
 .menu-container button {
-    background-color: transparent;
-    border: none;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: 400px;  
-    height: 120px;  
-    cursor: pointer;
-    
-    /* Centra el texto en el boton */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 16px;
-    color: white;
-    text-shadow: 1px 1px 2px black;
-    
-    transition: transform 0.2s ease; 
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 400px;  
+  height: 120px;  
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  transition: transform 0.2s ease; 
+}
+
+.menu-container button:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .menu-container {
+    padding: 70px 20px;
+    max-width: 90%;
+    min-height: auto;
   }
   
-  .menu-container button:hover {
-    transform: scale(1.05); 
+  #start-form input {
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
   }
+  
+  .menu-container button {
+    width: 90%;
+    height: auto;
+    font-size: 14px;
+    padding: 15px 0;
+  }
+  
+  .button-group {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-container {
+    padding: 50px 10px;
+    max-width: 95%;
+  }
+  
+  #start-form input {
+    font-size: 14px;
+  }
+  
+  .menu-container button {
+    font-size: 12px;
+    height: 80px;
+  }
+}
   
 
   .start-btn {
