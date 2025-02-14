@@ -92,10 +92,11 @@ body {
   
   .info-box {
     background: url('../assets/rectangle.png') no-repeat center;
-    background-size: 100% 100%;
-    width: 500px;   
-    height: 150px;  
-    margin: 0 auto 20px auto;  
+    background-size: contain;
+    width: 90%;
+    max-width: 500px;
+    aspect-ratio: 500 / 150; 
+    margin: 0 auto 20px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
