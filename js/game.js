@@ -7,12 +7,12 @@ const colors = ["red", "green", "blue", "yellow"];
 let allowInput = false; 
 
 const sounds = {
-  red: new Audio('../sounds/red.wav'),
-  green: new Audio('../sounds/green.wav'),
-  blue: new Audio('../sounds/blue.wav'),
-  yellow: new Audio('../sounds/yellow.wav'),
-  fail: new Audio('../sounds/fail.mp3'),
-  start: new Audio('../sounds/start.mp3')
+  red: new Audio('./sounds/red.wav'),
+  green: new Audio('./sounds/green.wav'),
+  blue: new Audio('./sounds/blue.wav'),
+  yellow: new Audio('./sounds/yellow.wav'),
+  fail: new Audio('./sounds/fail.mp3'),
+  start: new Audio('./sounds/start.mp3')
 };
 
 const displayPlayerName = document.getElementById('displayPlayerName');

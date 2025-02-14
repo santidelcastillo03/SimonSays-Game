@@ -1,6 +1,6 @@
 
 const sounds = {
-    pop: new Audio('../sounds/pop.mp3')
+    pop: new Audio('./sounds/pop.mp3')
 };
 
 function cargarPuntajes(){

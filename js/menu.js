@@ -13,7 +13,7 @@ document.getElementById('startGameLink').addEventListener('click', function(e) {
   });
   
   const sounds = {
-    pop: new Audio('../sounds/pop.mp3')
+    pop: new Audio('./sounds/pop.mp3')
   };
   
   function pop(){
