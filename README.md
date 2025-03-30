@@ -9,4 +9,3 @@ Simon Says Game is a web-based implementation of the classic memory challenge ga
 - **Progressive Difficulty:** Challenge yourself with increasingly longer sequences.
 - **Clean Code:** Built with HTML for structure, CSS for styling, and JavaScript for the game logic, making it easy to customize and extend.
 
-## Technology Stack
